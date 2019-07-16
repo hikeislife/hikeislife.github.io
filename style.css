@@ -73,8 +73,12 @@ section {
 .resume:hover {
 	color: var(--yellow);
 	background: var(--black);
-	  
 }
+.portfolio h1,
+.resume h1 {
+	background: transparent;
+}
+
 .name {
 	background: var(--black);
 	font-size: 2rem;
@@ -94,3 +98,27 @@ a:active {
 	color: var(--black);
 	text-decoration: none;
 }
+
+/* Resume */
+ .resumeh1 {
+ 	color: var(--yellow);
+ }
+ .resumeside {
+ 	margin: 120px 0;
+ 	color: var(--pink);
+ }
+ ul {
+ 	list-style-type: none;
+ 	margin-left: -20px;
+ }
+ li {
+ 	color: var(--black);
+ 	background: var(--pink);
+ 	margin: -55px 5px 65px -50px;
+/* 	margin-top: -20px;
+ 	margin-left: -30px;*/
+ 	padding: 10px;
+ 	padding-left: 50px;
+ 	cursor: pointer;
+ 	clip-path: polygon(8% 0, 100% 0, 100% 100%, 8% 100%, 0 50%);
+ }
