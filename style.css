@@ -75,10 +75,10 @@ section {
 	background: transparent;
 }
 h1 .selection {
-	-webkit-transition: opacity .5s ease-in-out;
+/*	-webkit-transition: opacity .5s ease-in-out;
     -moz-transition: opacity .5s ease-in-out;
     -ms-transition: opacity .5s ease-in-out;
-    -o-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;*/
 	transition: opacity .5s ease-in-out;
 }
 
@@ -163,7 +163,22 @@ a:active {
  	top: 200px;
  	width: 55vw;
  	overflow-y: auto;
- 	height: 60vh;
+ 	height: 70vh;
+ 	top: 111px;
+ }
+
+/*div .languages,*/
+/*.aboutme *, */
+/*div .hardskills, 
+div .software, 
+div .experience, 
+div .softskills, */ 
+.loadthis * {
+/* 	-webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;*/
+	transition: opacity .5s ease-in-out;
  }
 
  dt {
