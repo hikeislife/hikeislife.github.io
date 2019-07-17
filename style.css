@@ -74,12 +74,12 @@ section {
 .resume h1 {
 	background: transparent;
 }
-.selection {
-	-webkit-transition: opacity .9s ease-in;
-    -moz-transition: opacity .9s ease-in;
-    -ms-transition: opacity .9s ease-in;
-    -o-transition: opacity .9s ease-in;
-	transition: opacity .9s ease-in;
+h1 .selection {
+	-webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
 }
 
 .name {
