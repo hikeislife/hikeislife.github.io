@@ -165,6 +165,7 @@ a:active {
  	overflow-y: auto;
  	height: 70vh;
  	top: 111px;
+ 	padding-right: 10px;
  }
 
 /*div .languages,*/
@@ -186,3 +187,20 @@ div .softskills, */
  	margin-top: 10px;
  	color: var(--pink);
  }
+
+#scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--yellow);
+    border-radius: 3px;
+}
+ #scrollbar::-webkit-scrollbar {
+    width: 6px;
+    background-color: var(--black);
+}
+
+
+#scrollbar::-webkit-scrollbar-button {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: var(--pink);
+}
