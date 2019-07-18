@@ -15,7 +15,7 @@ navigate = (nav) => {
 	nav.addEventListener(`click`, (e) => {
 		$(".selection").style.opacity = 0;
 		$(`.${e.target.id}`).style.opacity = 0;
-		console.log($(`.${e.target.id}`))
+		$(`.loadThis`).style.transition = `opacity .9s ease-in-out .5s`;
 		navs.forEach(reset);
 		nav.classList.add('active')
 		// reposition title to make room for additional content
@@ -27,8 +27,11 @@ navigate = (nav) => {
 		setTimeout(() => {
 		 	$(".selection").innerHTML = `<br /> ${nav.innerHTML}`;
 		 	$(`.${e.target.id}`).style.display = "inline";
-		 	$(".selection").style.opacity = 1;
 		 	$(`.${e.target.id}`).style.opacity = 1;
+		 	$(".selection").style.opacity = 1;
+		 	
+		 	// 
+		 	console.log($(`.${e.target.id}`));
 		}, 600);
 		
 		
