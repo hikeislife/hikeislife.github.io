@@ -26,15 +26,13 @@ navigate = (nav) => {
 
 		setTimeout(() => {
 		 	$(".selection").innerHTML = `<br /> ${nav.innerHTML}`;
-		 	$(`.${e.target.id}`).style.display = "inline";
-		 	$(`.${e.target.id}`).style.opacity = 1;
 		 	$(".selection").style.opacity = 1;
 		 	
-		 	// 
-		 	console.log($(`.${e.target.id}`));
 		}, 600);
-		
-		
+		setTimeout(() => {
+			$(`.${e.target.id}`).style.display = "inline";
+		 	$(`.${e.target.id}`).style.opacity = 1;
+		}, 600);
 	})
 }
 
