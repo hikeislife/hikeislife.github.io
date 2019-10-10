@@ -13,7 +13,7 @@ body {
 	font-size: 4rem;
 	overflow: hidden;
 	position: relative;
-	font-family: sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 .sidebyside {
@@ -106,6 +106,16 @@ a:active {
 }
 
 /* Resume, portfolio */
+.viewresumeouter {
+    clip-path: polygon(3% 0, 100% 0, 97% 50%, 100% 100%, 3% 100%, 0 50%);
+    left: 18px;
+    z-index: 2;
+    background: var(--black);
+    height: 44px;
+    position: fixed;
+    top: 18px;
+    width: 45.5%;
+}
 
 .otherpage {
 	background: var(--pink);
@@ -114,6 +124,7 @@ a:active {
 	font-size: 2rem;
 	text-align: center;
 	width: 45%;
+    padding-left: 2px;
 	top: 20px;
 }
 
@@ -122,11 +133,14 @@ a:active {
 	right: 20px;
 }
 
+
+
 .viewresume {
 	clip-path: polygon(3% 0, 100% 0, 97% 50%, 100% 100%, 3% 100%, 0 50%);
 	left: 20px;
-	z-index: 2;
+	z-index: 20;
 }
+
 
 .resumeh1, .portfolioh1 {
 	color: var(--yellow);
@@ -268,6 +282,7 @@ section.portSection {
             left: 380px;
             top: -200px;
             margin-bottom: -220px;
+            box-shadow: 5px 5px 10px var(--black);
         }
         .mobileScreen {
             width: 148px;
@@ -275,6 +290,7 @@ section.portSection {
             height: 240px;
             margin: 10px auto;
             overflow: hidden;
+
             
         }
         .mobileScreen div {
@@ -293,11 +309,13 @@ section.portSection {
         .mobileScreen ::-webkit-scrollbar {
             width: 5px;
         }
+
         img {
             width: 100%;
         }
         .site {
             margin: 20px;
+            position: relative;
         }
         .descr {
             padding: 20px 50px;
@@ -357,3 +375,42 @@ section.portSection {
             color: var(--pink);
             border: 2px solid var(--pink);
         }
+
+.indev {
+  overflow: hidden;
+  position: absolute;
+  height: 124px;
+  width: 157px;
+/*  z-index: 3;*/
+  background: transparent;
+}
+/*.indev::before,
+.indev::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #ff7700;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}*/
+.indev span {
+  position: absolute;
+  right: -2px;
+  top: 30px;
+  display: block;
+  width: 222px;
+  padding: 10px 0;
+  background-color: var(--pink);
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color: var(--yellow);
+  font: 700 14px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-align: center;
+  transform: rotate(-45deg);
+}
+
+.apps h1 {
+    color: var(--yellow);
+}
