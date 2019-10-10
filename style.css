@@ -227,7 +227,7 @@ dt {
 
 /* PORTFOLIO */
 
-section {
+section.portSection {
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
@@ -304,20 +304,30 @@ section {
             background: var(--pink);
             margin: 20px;
             border-radius: 20px;
-            height: 333px;
+            height: 263px;
             font-size: 40px;
             display: flex;
             align-items: center;
             text-align: center;
         }
-        section:nth-child(even) .descr {
+        section.portSection:nth-child(even) .descr {
             grid-column: 2/3;
             background: var(--yellow);
         }
-        section:nth-child(even) .site {
+        section.portSection:nth-child(even) .site {
             grid-column: 1/2;
             grid-row: 1/2;
+            justify-self: end;
         }
+
+        section.portSection:nth-child(even) .wide {
+            border-color: var(--pink);
+        }
+        section.portSection:nth-child(even) .codeButton {
+            border-color: var(--pink);
+            color: var(--pink);
+        }
+        
         section.portSection {
         	margin: 50px auto;
         }
@@ -332,4 +342,18 @@ section {
         	top: -34px;
         	left: 80px;
 			text-align: center;
+        }
+        .tech {
+            font-size: 18px;
+            color: var(--yellow);
+            border: 2px solid var(--yellow);
+            padding: 5px;
+            border-radius: 10px;
+            position: relative;
+            bottom: 30px;
+            left: 40px;
+        }
+        section.portSection:nth-child(even) .tech {
+            color: var(--pink);
+            border: 2px solid var(--pink);
         }
