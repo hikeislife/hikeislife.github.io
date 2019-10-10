@@ -221,15 +221,19 @@ dt {
 	margin-top: 10px;
 	color: var(--pink);
 }
-
+#scrollbar {
+    overflow: hidden;
+    width: 700px;
+    box-sizing: content-box;
+}
 #scrollbar::-webkit-scrollbar-thumb {
-   background-color: var(--yellow);
-   border-radius: 3px;
+    background-color: var(--yellow);
+    border-radius: 3px;
 }
 
 #scrollbar::-webkit-scrollbar {
-   width: 6px;
-   background-color: var(--black);
+    width: 6px;
+    background-color: var(--black);
 }
 
 #scrollbar::-webkit-scrollbar-button {
@@ -238,143 +242,143 @@ dt {
 	border-radius: 50%;
 	background-color: var(--pink);
 }
+#scrollbar div {
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    overflow-y: scroll;
+    padding-right: 27px;
+}
 
 /* PORTFOLIO */
 
 section.portSection {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        .wide {
-            width: 600px;
-            height: 300px;
-            overflow: hidden;
-            border: 2px solid var(--yellow);
-            box-sizing: border-box;
-			/*padding: 3px 7px;**/
-        }
-        .wideScreen {
-            overflow: hidden; 
-            width: 613px;
-            height: 300px;
-            /*margin: 5px auto;*/
-            box-sizing: content-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.wide {
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+    border: 2px solid var(--yellow);
+    box-sizing: border-box;
+}
+.wideScreen {
+    overflow: hidden; 
+    width: 613px;
+    height: 300px;
+    box-sizing: content-box;
+}
+.wideScreen div {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    padding-right: 17px;
+}
+.wideScreen div img {
+    margin-bottom: -11px;
+}
+.mobile {
+    width: 150px;
+    height: 270px;
+    background: #222;
+    border: 2px solid #444;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    left: 380px;
+    top: -200px;
+    margin-bottom: -220px;
+    box-shadow: 5px 5px 10px var(--black);
+}
+.mobileScreen {
+    width: 148px;
+    background: white;
+    height: 240px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.mobileScreen div {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 22px;
+    box-sizing: content-box;
+}
+.mobileScreen div img {
+    width: 113%;
+    margin-bottom: -4px;
+}
 
-            /*overflow-x: hidden;*/
-        }
-        .wideScreen div {
-            overflow-y: scroll;
-            width: 100%;
-            height: 100%;
-            padding-right: 17px;
-        }
-        .wideScreen div img {
-        	margin-bottom: -11px;
-        }
-        .mobile {
-            width: 150px;
-            height: 270px;
-            background: #222;
-            border: 2px solid #444;
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-            left: 380px;
-            top: -200px;
-            margin-bottom: -220px;
-            box-shadow: 5px 5px 10px var(--black);
-        }
-        .mobileScreen {
-            width: 148px;
-            background: white;
-            height: 240px;
-            margin: 10px auto;
-            overflow: hidden;
+.mobileScreen ::-webkit-scrollbar {
+    width: 5px;
+}
 
-            
-        }
-        .mobileScreen div {
-            width: 100%;
-            height: 100%;
-            overflow-y: scroll;
-            /**/
-            padding-right: 22px;
-            box-sizing: content-box;
-        }
-        .mobileScreen div img {
-            width: 113%;
-            margin-bottom: -4px;
-        }
+img {
+    width: 100%;
+}
+.site {
+    margin: 20px;
+    position: relative;
+}
+.descr {
+    padding: 20px 50px;
+    background: var(--pink);
+    margin: 20px;
+    border-radius: 20px;
+    height: 263px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+section.portSection:nth-child(even) .descr {
+    grid-column: 2/3;
+    background: var(--yellow);
+}
+section.portSection:nth-child(even) .site {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: end;
+}
 
-        .mobileScreen ::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        img {
-            width: 100%;
-        }
-        .site {
-            margin: 20px;
-            position: relative;
-        }
-        .descr {
-            padding: 20px 50px;
-            background: var(--pink);
-            margin: 20px;
-            border-radius: 20px;
-            height: 263px;
-            font-size: 40px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-        }
-        section.portSection:nth-child(even) .descr {
-            grid-column: 2/3;
-            background: var(--yellow);
-        }
-        section.portSection:nth-child(even) .site {
-            grid-column: 1/2;
-            grid-row: 1/2;
-            justify-self: end;
-        }
-
-        section.portSection:nth-child(even) .wide {
-            border-color: var(--pink);
-        }
-        section.portSection:nth-child(even) .codeButton {
-            border-color: var(--pink);
-            color: var(--pink);
-        }
+section.portSection:nth-child(even) .wide {
+    border-color: var(--pink);
+}
+section.portSection:nth-child(even) .codeButton {
+    border-color: var(--pink);
+    color: var(--pink);
+}
         
-        section.portSection {
-        	margin: 50px auto;
-        }
-        .codeButton {
-        	border: 2px solid var(--yellow);
-        	border-radius: 26px;
-        	width: 200px;
-        	color: var(--yellow);
-        	font-size: 25px;
-        	padding: 10px;
-        	position: relative;
-        	top: -34px;
-        	left: 80px;
-			text-align: center;
-        }
-        .tech {
-            font-size: 18px;
-            color: var(--yellow);
-            border: 2px solid var(--yellow);
-            padding: 5px;
-            border-radius: 10px;
-            position: relative;
-            bottom: 30px;
-            left: 40px;
-        }
-        section.portSection:nth-child(even) .tech {
-            color: var(--pink);
-            border: 2px solid var(--pink);
-        }
+section.portSection {
+    margin: 50px auto;
+}
+.codeButton {
+    border: 2px solid var(--yellow);
+    border-radius: 26px;
+    width: 200px;
+    color: var(--yellow);
+    font-size: 25px;
+    padding: 10px;
+    position: relative;
+    top: -34px;
+    left: 80px;
+	text-align: center;
+}
+.tech {
+    font-size: 18px;
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+    padding: 5px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 30px;
+    left: 40px;
+}
+section.portSection:nth-child(even) .tech {
+    color: var(--pink);
+    border: 2px solid var(--pink);
+}
 
 .indev {
   overflow: hidden;
