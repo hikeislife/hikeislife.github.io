@@ -252,10 +252,7 @@ dt {
 
 /* PORTFOLIO */
 
-section.portSection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+
 .wide {
     width: 600px;
     height: 300px;
@@ -321,6 +318,15 @@ img {
     margin: 20px;
     position: relative;
 }
+.descHolder {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 350px 1fr;
+}
+.techWrapper {
+  width: 600px;
+  justify-self: right;
+}
 .descr {
     padding: 20px 50px;
     background: var(--pink);
@@ -328,27 +334,14 @@ img {
     border-radius: 20px;
     height: 263px;
     font-size: 40px;
-    display: flex;
     align-items: center;
     text-align: center;
-}
-section.portSection:nth-child(even) .descr {
-    grid-column: 2/3;
-    background: var(--yellow);
-}
-section.portSection:nth-child(even) .site {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    justify-self: end;
+    justify-self: left;
+    width: 500px;
+    display: grid;
+    
 }
 
-section.portSection:nth-child(even) .wide {
-    border-color: var(--pink);
-}
-section.portSection:nth-child(even) .codeButton {
-    border-color: var(--pink);
-    color: var(--pink);
-}
         
 section.portSection {
     margin: 50px auto;
@@ -374,6 +367,7 @@ section.portSection {
     position: relative;
     bottom: 30px;
     left: 40px;
+    display: inline;
 }
 section.portSection:nth-child(even) .tech {
     color: var(--pink);
@@ -417,4 +411,58 @@ section.portSection:nth-child(even) .tech {
 
 .apps h1 {
     color: var(--yellow);
+}
+
+@media only screen and (min-width: 1300px) {
+section.portSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+section.portSection:nth-child(odd) .descr {
+  justify-self: right;
+}
+section.portSection:nth-child(even) .descr {
+  
+  background: var(--yellow);
+  
+}
+section.portSection:nth-child(even) .descHolder {
+  justify-self: left;
+  grid-column: 2/3;
+}
+section.portSection:nth-child(even) .site {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: end;
+}
+
+section.portSection:nth-child(even) .wide {
+    border-color: var(--pink);
+}
+section.portSection:nth-child(even) .codeButton {
+    border-color: var(--pink);
+    color: var(--pink);
+}
+}
+@media only screen and (max-width: 1299px) {
+  section.portSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+section.portSection .descr {
+    display: grid;
+    justify-self: center;
+}
+.techWrapper {
+  justify-self: center;
+  display: flex;
+  position: relative;
+  top: 30px;
+
+}
+section.portSection:nth-child(2n) .tech {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
 }
